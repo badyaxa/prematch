@@ -3,7 +3,7 @@ package com.leonbets.service.impl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
-import com.leonbets.model.EventData;
+import com.leonbets.model.LeonEventData;
 import com.leonbets.model.LeonEvent;
 import com.leonbets.model.LeonLeague;
 import com.leonbets.model.LeonMarket;
@@ -96,11 +96,11 @@ public class LeonApiJsonService implements LeonService {
         CompletableFuture<HttpResponse<String>> eventsResponse = client.sendAsync(
                 eventsRequest,
                 HttpResponse.BodyHandlers.ofString());
-        EventData eventsData;
+        LeonEventData eventsData;
         try {
             eventsData = objectMapper.readValue(
                     eventsResponse.get().body(),
-                    objectMapper.getTypeFactory().constructType(EventData.class));
+                    objectMapper.getTypeFactory().constructType(LeonEventData.class));
         } catch (JsonProcessingException | InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }

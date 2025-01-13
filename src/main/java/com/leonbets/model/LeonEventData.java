@@ -13,6 +13,6 @@ import java.util.List;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class EventData {
+public class LeonEventData {
     private List<LeonEvent> events;
 }
