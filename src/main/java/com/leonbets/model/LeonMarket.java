@@ -6,14 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Runner {
-    private Long id;
+public class LeonMarket {
     private String name;
-    private Integer r;
-    private String priceStr;
+    private List<LeonRunner> runners;
 }

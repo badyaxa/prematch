@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SportsEvent {
+public class LeonSportEvent {
     private String name;
-    private List<Region> regions;
+    private List<LeonRegion> regions;
 }

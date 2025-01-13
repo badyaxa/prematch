@@ -6,13 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class League {
-    private Long id;
+public class LeonRegion {
     private String name;
-    private Boolean top;
+    private List<LeonLeague> leagues;
 }

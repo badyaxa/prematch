@@ -13,9 +13,9 @@ import java.util.List;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Event {
+public class LeonEvent {
     private Long id;
     private String name;
     private Long kickoff;
-    private List<Market> markets;
+    private List<LeonMarket> markets;
 }

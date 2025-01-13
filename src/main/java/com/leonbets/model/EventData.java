@@ -14,5 +14,5 @@ import java.util.List;
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EventData {
-    private List<Event> events;
+    private List<LeonEvent> events;
 }
